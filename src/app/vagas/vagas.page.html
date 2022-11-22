@@ -1,0 +1,65 @@
+<ion-app>
+  <ion-toolbar>
+    <ion-img id="logo"src="https://cdn.pixabay.com/photo/2019/04/16/06/46/logo-4131033_640.png"></ion-img>
+    <input type="text" name="sof" id="pesquisa" placeholder="Pesquisar vagas">
+  </ion-toolbar>
+
+  <ion-content>
+  
+    <button id="vh6"><h6 id="h6"><strong>Recomendações para você</strong></h6></button>
+    
+    <!-- Categorias -->
+    <ion-list *ngFor="let c of categorias">
+
+      <!-- Vagas -->
+      <ion-item *ngFor="let v of c.vagas" lines="none">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{v.titulo}}</ion-card-title>
+            <ion-card-subtitle>{{c.modalidade}} - {{v.regiao}}</ion-card-subtitle>
+          </ion-card-header>
+            
+          <ion-card-content>
+            {{v.resumo}}
+            <ion-button expand="block" click="detalhesDaVaga(v)">Candidatar-se</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+    <!-- <ion-card>
+        <ion-card-header>
+          <ion-card-title>Desenvolvedor Java</ion-card-title>
+          <ion-card-subtitle>Presencial - RJ</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+            Conhecimento nas últimas versões do Angular, HTML, CSS e JavaScript.
+            <ion-button expand="block" (click)="setOpen(true)">Candidatar-se</ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+          <ion-card-header>
+            <ion-card-title>Desenvolvedor Front-End jr</ion-card-title>
+            <ion-card-subtitle>Semi-Presencial - RJ</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+              Executa a manutenção dos sistemas, fazendo eventuais correções necessárias. 
+              <ion-button expand="block" (click)="setOpen(true)">Candidatar-se</ion-button>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+            <ion-card-header>
+              <ion-card-title>Desenvolvedor Back-End jr</ion-card-title>
+              <ion-card-subtitle>Home office</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>
+                O Analista Desenvolvedor Back End deverá, também, analisar e aplicar eventuais correções de software. 
+                <ion-button expand="block" (click)="setOpen(true)">Candidatar-se</ion-button>
+            </ion-card-content>
+          </ion-card> -->
+  </ion-content>
+</ion-app>

@@ -1,0 +1,36 @@
+<ion-toolbar>
+  <button (click)="voltar()"class="back">
+    <img id="ba"src="https://e7.pngegg.com/pngimages/27/441/png-clipart-computer-icons-user-interface-youtube-voltar-text-sign-thumbnail.png" alt="back">
+  </button>
+  <ion-img id="img"src="https://cdn.pixabay.com/photo/2019/04/16/06/46/logo-4131033_640.png"></ion-img>
+</ion-toolbar>
+
+<ion-content>
+  <div class="container">
+    <h1 id="cad"><strong>Entrar</strong></h1>
+    <div id="form">
+      <p>Email</p>
+      <ion-item>
+        
+      </ion-item>
+      <input type="email" name="email" id="txte" [(ngModel)]="email">
+      <p>Senha</p>
+      <p><input type="password" name="senha" id="password" [(ngModel)]="password"></p>
+      <div>
+        <input type = "checkbox" id = "subscribeNews" name = "subscribe" value = "lembrar">
+        <label for = "subscribeNews"> Lembrar de mim </label>
+      </div>
+      <p><input (click)="login()" type="submit" value="Entrar" id="btn"></p>
+      <p>
+        <button class="bt">
+          <img id="goo" src="../../assets/google.png" alt="google">
+          <p id="es">continuar com o google</p>
+        </button>
+      </p>
+      <p id="temlog">Não tem cadastro? <button id="cadastrar"><span style="color: blue;">Clica Aqui</span></button></p>
+    </div>
+  </div>
+  <footer>
+    &copy;ProjetoIntegrador
+  </footer>
+</ion-content>
